@@ -32,13 +32,14 @@ export default function Home()
   useEffect(()=>
   {
     const localDay = Number(localStorage.getItem('days'))
-
+    console.log('estoy arriba')
     if(getLocal().date !== currentDate.getDate())
     {
       if(localDay===null)return
       setDay(localDay-1)
       return
     }
+    console.log('estoy abajo')
     setDay(localDay)
   },[])
 
