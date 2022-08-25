@@ -14,7 +14,7 @@ export default function Image({pageLink})
 
    useEffect(()=>
    {
-     const local = getLocal();
+     const local = getLocal()||{};
      if(local!==null&&date!==local.date 
      || local!==undefined&&date!==local.date)return setLocal();
 

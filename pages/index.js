@@ -26,13 +26,17 @@ export default function Home()
   
   function getLocal()
   {
-    return JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)); 
+    const local = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+    if(local===undefined || local===null)return undefined
+    return local
   }
   
   useEffect(()=>
   {
     const localDay = Number(localStorage.getItem('days'))
-    console.log('estoy arriba')
+    const local=getLocal();
+    
+    if(local===undefined)return
     if(getLocal().date !== currentDate.getDate())
     {
       if(localDay===null)return
