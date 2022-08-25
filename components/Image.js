@@ -6,7 +6,7 @@ import { appContext } from '../pages';
 
 export default function Image({pageLink}) 
 {
-   const{currentDate,getLocal}=useContext(appContext)
+   const{currentDate,getLocal,LOCAL_STORAGE_KEY}=useContext(appContext)
 
    const[date,setDate]=useState(currentDate.getDate());
    const[link,setLink]=useState(pageLink);

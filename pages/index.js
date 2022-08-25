@@ -20,7 +20,8 @@ export default function Home()
   const contextValue=
   {
     currentDate,
-    getLocal
+    getLocal,
+    LOCAL_STORAGE_KEY
   }
   
   function getLocal()
