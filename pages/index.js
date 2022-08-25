@@ -96,11 +96,14 @@ export default function Home()
       <appContext.Provider value={contextValue}>
          <main className='counter-app'>
             <h1 className='counter-app__counter'>
-                <span>{day}</span>
-                <span className='counter-app__letter' data-counter-app-letter>d</span>
-                <span className='counter-app__letter' data-counter-app-letter>a</span>
-                <span className='counter-app__letter' data-counter-app-letter>y</span>
-                <span className='counter-app__letter' data-counter-app-letter>s</span>
+                <span className='counter-app__days'>
+                  <span>
+                    {day} days
+                  </span>
+                  <span>
+                    {150-day} days                   
+                  </span> 
+                </span>
             </h1>
             {status==='loading'&&<div>loading</div>}
             {status==='success' && data && <Image pageLink={data}/>} 

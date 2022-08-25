@@ -25,6 +25,11 @@
         border-radius: .2rem;
     }
 
+    &__days
+    {
+        @extend .flex;
+        flex-direction: column;
+    }
     &__restart-button
     {
         @extend .button;

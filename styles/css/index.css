@@ -31,7 +31,7 @@ body {
   background-color: var(--secondary-color);
 }
 
-.flex, .counter-app {
+.flex, .counter-app, .counter-app__days {
   display: flex;
   align-items: center;
 }
@@ -80,6 +80,9 @@ body {
 .counter-app__img {
   height: 38rem;
   border-radius: 0.2rem;
+}
+.counter-app__days {
+  flex-direction: column;
 }
 .counter-app__restart-button {
   position: fixed;
