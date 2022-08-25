@@ -1,0 +1,42 @@
+@use  '../util/custom-properties';
+@use  '../util/extends';
+
+.counter-app
+{
+    @extend .flex;
+    position: relative;
+    justify-content: space-evenly;
+    width: 95rem;
+    max-width: 100%;
+    min-height: 35rem;
+    margin: 2.5rem auto 0 auto;
+    padding: 2rem;
+    background-color: var(--primary-color);
+    border-radius: .8rem;
+
+    &__counter
+    {
+       font-size: 6.5rem;
+       margin-bottom: 1rem;
+    }
+    &__img
+    {
+        height: 43rem;
+        border-radius: .2rem;
+    }
+
+    &__restart-button
+    {
+        @extend .button;
+        position: absolute;
+        right: 11rem;
+        top: 80%;
+        background-image: linear-gradient(0deg,var(--cancel-color1),var(--cancel-color2));
+        box-shadow: .5rem .5rem 1rem .5rem rgb(22, 22, 22);
+ 
+        &:active
+        {
+         background-image: linear-gradient(0deg,var(--cancel-color2),var(--cancel-color1));
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@use './util/custom-properties';
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html
+{
+    font-size: 16px;
+}
+div
+{
+    display: block;
+}
+body
+{
+    height: 100vh;
+    font-family: var(--fun-font);
+    color:var(--text-color);
+    background-color: var(--secondary-color);
+}
+
+
