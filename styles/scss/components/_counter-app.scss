@@ -21,15 +21,15 @@
     }
     &__img
     {
-        height: 43rem;
+        height: 38rem;
         border-radius: .2rem;
     }
 
     &__restart-button
     {
         @extend .button;
-        position: absolute;
-        right: 11rem;
+        position: fixed;
+        right: 5rem;
         top: 80%;
         background-image: linear-gradient(0deg,var(--cancel-color1),var(--cancel-color2));
         box-shadow: .5rem .5rem 1rem .5rem rgb(22, 22, 22);

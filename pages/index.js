@@ -12,7 +12,7 @@ export const appContext = React.createContext();
 export default function Home() 
 {
   const{data,status,isPreviousData}=useQuery(['artistPage'] ,fetchArtitsPage);
-  const[day,setDay]=useState();
+  const[day,setDay]=useState(150);
 
   const link = getLink();
   const currentDate = new Date();
@@ -35,7 +35,7 @@ export default function Home()
   {
     const localDay = Number(localStorage.getItem('days'))
     const local=getLocal();
-    
+
     if(local===undefined)return
     if(getLocal().date !== currentDate.getDate())
     {
@@ -74,6 +74,7 @@ export default function Home()
   {
      console.log(html)
      const container = html.querySelector("#post-list").children[1].children[0];
+     console.log(container)
      const links = [...container.children].map((span) => span.children[0].href);
      console.log(links)
      const linksShuffle = randomizer(links);
